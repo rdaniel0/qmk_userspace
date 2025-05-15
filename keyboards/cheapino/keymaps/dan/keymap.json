@@ -16,7 +16,7 @@
             "KC_ESC", "KC_TAB", "LCTL(KC_A)", "KC_NO", "LCTL(KC_F)", "KC_GRV", "KC_NO", "KC_LBRC", "KC_RBRC", "KC_BSPC",
             "KC_NO", "TO(3)", "TO(4)", "TO(5)", "TO(6)", "KC_NO", "KC_SCLN", "KC_LPRN", "KC_RPRN", "KC_BSLS",
             "LCTL_T(KC_NO)", "LSFT_T(KC_NO)", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_MINS", "RSFT_T(KC_EQL)", "RCTL_T(KC_NO)",
-            "KC_LGUI", "KC_SPC", "KC_TRNS", "KC_NO", "KC_ENT", "KC_RALT"
+            "KC_LGUI", "KC_LALT", "KC_TRNS", "KC_NO", "KC_ENT", "KC_RALT"
         ],
         [
             "KC_NO", "KC_NO", "KC_HOME", "KC_END", "KC_PGUP", "KC_NO", "KC_7", "KC_8", "KC_9", "KC_BSPC",
