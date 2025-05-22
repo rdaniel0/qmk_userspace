@@ -3,10 +3,12 @@
 enum layers { Graphite, QWERTY, Cmds_Symb, Nav_Numbers, OS_FNum, Macros, Gaming };
 
 #define LTC_AREP LT(Cmds_Symb, KC_0)
+#define LTN_AREP LT(Nav_Numbers, KC_0)
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
-  if (keycode == LTC_AREP) {
-    return false; // Ignore custom arep key so we don't repeat it
+  switch (keycode) {
+    case LTC_AREP:
+    case LTN_AREP: return false; // Ignore custom arep keys so we don't repeat it
   }
   return true;
 }
