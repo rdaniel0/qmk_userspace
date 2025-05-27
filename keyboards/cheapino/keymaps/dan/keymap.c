@@ -72,32 +72,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY] = LAYOUT_split_3x5_3(
         KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,
         KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN,
-        KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-        KC_NO, KC_SPC, MO(Cmds_Symb), MO(Nav_Numbers), KC_ENT, TO(0)
+        KC_Z, LSFT_T(KC_X), KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, RSFT_T(KC_DOT), KC_SLSH,
+        KC_LGUI, KC_SPC, MO(Cmds_Symb), MO(Nav_Numbers), KC_ENT, TO(0)
     ),
     [Cmds_Symb] = LAYOUT_split_3x5_3(
-        KC_ESC, KC_TAB, LCTL(KC_A), KC_NO, LCTL(KC_F), KC_GRV, KC_NO, KC_LBRC, KC_RBRC, KC_BSPC,
-        TO(QWERTY), TO(OS_FNum), KC_NO, TO(Macros), TO(Gaming), KC_NO, KC_SCLN, KC_LPRN, KC_RPRN, KC_BSLS,
-        LCTL_T(KC_NO), LSFT_T(KC_NO), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_MINS, RSFT_T(KC_EQL), RCTL_T(KC_NO),
+        KC_ESC, KC_TAB, LCTL(KC_A), KC_NO, LCTL(KC_F), KC_GRV, KC_NO, KC_LBRC, KC_RBRC, KC_DEL,
+        TO(QWERTY), TO(OS_FNum), KC_NO, TO(Macros), TO(Gaming), KC_NO, KC_SCLN, KC_LPRN, KC_RPRN, KC_NO,
+        LCTL_T(KC_NO), LSFT_T(KC_NO), LGUI(KC_A), KC_NO, LGUI(KC_F), KC_NO, KC_NO, KC_MINS, KC_EQL, KC_BSLS,
         KC_LGUI, KC_LALT, KC_TRNS, KC_NO, KC_ENT, KC_RALT
     ),
     [Nav_Numbers] = LAYOUT_split_3x5_3(
         KC_NO, KC_NO, KC_HOME, KC_END, KC_PGUP, KC_NO, KC_7, KC_8, KC_9, KC_BSPC,
         KC_NO, KC_LEFT, KC_UP, KC_RGHT, KC_PGDN, KC_NO, KC_4, KC_5, KC_6, KC_NO,
-        LCTL_T(KC_NO), LSFT_T(KC_NO), KC_DOWN, KC_NO, KC_NO, KC_0, KC_1, KC_2, RSFT_T(KC_3), RCTL_T(KC_NO),
+        LCTL_T(KC_NO), LSFT_T(KC_NO), KC_DOWN, KC_NO, KC_NO, KC_0, KC_1, KC_2, KC_3, KC_NO,
         KC_LGUI, KC_SPC, KC_NO, KC_TRNS, KC_ENT, KC_RALT
     ),
     [OS_FNum] = LAYOUT_split_3x5_3(
         KC_NO, KC_NO, KC_MPRV, KC_MNXT, KC_VOLU, KC_NO, KC_F7, KC_F8, KC_F9, KC_F10,
-        KC_NO, KC_NO, RGB_VAI, KC_SLEP, KC_VOLD, KC_NO, KC_F4, KC_F5, KC_F6, KC_F11,
-        RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_MPLY, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12,
-        KC_LGUI, KC_SPC, TO(0), KC_NO, KC_ENT, KC_RALT
+        RGB_HUD, RGB_SAD, RGB_VAI, KC_SLEP, KC_VOLD, KC_NO, KC_F4, KC_F5, KC_F6, KC_F11,
+        KC_LCTL, KC_LSFT, RGB_VAD, KC_NO, KC_MPLY, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12,
+        KC_LGUI, KC_SPC, KC_NO, KC_NO, KC_ENT, TO(0)
     ),
     [Macros] = LAYOUT_split_3x5_3(
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, TO(0), KC_NO, KC_NO, KC_NO
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_ENTER, TO(0)
     ),
     [Gaming] = LAYOUT_split_3x5_3(
         KC_B, KC_L, KC_D, KC_W, KC_Z, KC_QUOT, KC_F, KC_O, KC_U, KC_J,
