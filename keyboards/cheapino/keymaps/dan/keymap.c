@@ -44,14 +44,6 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case LTC_AREP:
-    case LTN_AREP:
-      if (record->tap.count) {
-        alt_repeat_key_invoke(&record->event);
-        return false;
-      }
-      return true;
-
     case ALT_TION: SEND_STRING_ON_PRESS("tion");
     case ALT_THE: SEND_STRING_ON_PRESS("the");
     case ALT_EFORE: SEND_STRING_ON_PRESS("efore");
@@ -75,13 +67,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_B, KC_L, KC_D, KC_W, KC_Z, KC_QUOT, KC_F, KC_O, KC_U, KC_J,
         KC_N, KC_R, KC_T, KC_S, KC_G, KC_Y, KC_H, KC_A, KC_E, KC_I,
         LCTL_T(KC_Q), LSFT_T(KC_X), KC_M, KC_C, KC_V, KC_K, KC_P, KC_COMM, RSFT_T(KC_DOT), RCTL_T(KC_SLSH),
-        KC_LGUI, KC_SPC, LTC_AREP, LTN_AREP, KC_ENT, KC_RALT
+        KC_LGUI, KC_SPC, MO(Cmds_Symb), MO(Nav_Numbers), KC_ENT, QK_AREP
     ),
     [QWERTY] = LAYOUT_split_3x5_3(
         KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,
         KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN,
         KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-        KC_NO, KC_SPC, LTC_AREP, LTN_AREP, KC_ENT, TO(0)
+        KC_NO, KC_SPC, MO(Cmds_Symb), MO(Nav_Numbers), KC_ENT, TO(0)
     ),
     [Cmds_Symb] = LAYOUT_split_3x5_3(
         KC_ESC, KC_TAB, LCTL(KC_A), KC_NO, LCTL(KC_F), KC_GRV, KC_NO, KC_LBRC, KC_RBRC, KC_BSPC,

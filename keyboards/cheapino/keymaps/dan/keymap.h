@@ -2,17 +2,6 @@
 
 enum layers { Graphite, QWERTY, Cmds_Symb, Nav_Numbers, OS_FNum, Macros, Gaming };
 
-#define LTC_AREP LT(Cmds_Symb, KC_0)
-#define LTN_AREP LT(Nav_Numbers, KC_0)
-
-bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
-  switch (keycode) {
-    case LTC_AREP:
-    case LTN_AREP: return false; // Ignore custom arep keys so we don't repeat it
-  }
-  return true;
-}
-
 enum custom_keycodes {
   // Custom Alternate Repeat Keycodes
   ALT_TION = SAFE_RANGE,
