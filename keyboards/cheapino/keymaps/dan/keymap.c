@@ -76,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LGUI, KC_SPC, MO(Cmds_Symb), MO(Nav_Numbers), KC_ENT, TO(0)
     ),
     [Cmds_Symb] = LAYOUT_split_3x5_3(
-        KC_ESC, KC_TAB, LCTL(KC_A), KC_NO, LCTL(KC_F), KC_GRV, KC_NO, KC_LBRC, KC_RBRC, KC_DEL,
-        TO(QWERTY), TO(OS_FNum), KC_NO, TO(Macros), TO(Gaming), KC_NO, KC_SCLN, KC_LPRN, KC_RPRN, KC_NO,
-        LCTL_T(KC_NO), LSFT_T(KC_NO), LGUI(KC_A), KC_NO, LGUI(KC_F), KC_NO, KC_NO, KC_MINS, KC_EQL, KC_BSLS,
+        KC_ESC, KC_TAB, LCTL(KC_A), KC_DEL, LCTL(KC_F), KC_GRV, KC_NO, KC_LBRC, KC_RBRC, KC_DEL,
+        TO(QWERTY), MO(OS_FNum), KC_NO, MO(Macros), TO(Gaming), KC_NO, KC_SCLN, KC_LPRN, KC_RPRN, KC_NO,
+        LCTL_T(KC_NO), LSFT_T(LGUI(KC_TAB)), LGUI(KC_A), KC_NO, LGUI(KC_F), KC_NO, KC_NO, KC_MINS, KC_EQL, KC_BSLS,
         KC_LGUI, KC_LALT, KC_TRNS, KC_NO, KC_ENT, KC_RALT
     ),
     [Nav_Numbers] = LAYOUT_split_3x5_3(
@@ -88,16 +88,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LGUI, KC_SPC, KC_NO, KC_TRNS, KC_ENT, KC_RALT
     ),
     [OS_FNum] = LAYOUT_split_3x5_3(
-        KC_NO, KC_NO, KC_MPRV, KC_MNXT, KC_VOLU, KC_NO, KC_F7, KC_F8, KC_F9, KC_F10,
-        RGB_HUD, RGB_SAD, RGB_VAI, KC_SLEP, KC_VOLD, KC_NO, KC_F4, KC_F5, KC_F6, KC_F11,
+        RGB_SAD, KC_NO, KC_MPRV, KC_MNXT, KC_VOLU, KC_NO, KC_F7, KC_F8, KC_F9, KC_F10,
+        RGB_HUD, KC_TRNS, RGB_VAI, KC_SLEP, KC_VOLD, KC_NO, KC_F4, KC_F5, KC_F6, KC_F11,
         KC_LCTL, KC_LSFT, RGB_VAD, KC_NO, KC_MPLY, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12,
-        KC_LGUI, KC_SPC, KC_NO, KC_NO, KC_ENT, TO(0)
+        KC_LGUI, KC_SPC, KC_NO, KC_NO, KC_ENT, KC_NO
     ),
     [Macros] = LAYOUT_split_3x5_3(
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_ENTER, TO(0)
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_ENTER, KC_NO
     ),
     [Gaming] = LAYOUT_split_3x5_3(
         KC_B, KC_L, KC_D, KC_W, KC_Z, KC_QUOT, KC_F, KC_O, KC_U, KC_J,
